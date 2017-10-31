@@ -2,22 +2,22 @@ let socket;
 
 function init(url) {
   socket = new WebSocket(url);
-  console.log('connecting...');
+  console.log('ws-client,socket.init: ' + 'connecting...');
 }
 
 function registerOpenHandler (handlerFunction) {
   socket.onopen = () => {
-    console.log('open');
+    console.log('registerOpenHandler:' + 'open');
     handlerFunction();
-  }
+  };
 }
 
 function registerMessageHandler (handlerFunction) {
   socket.onmessage = (e) => {
-    console.log('message', e.data);
+    console.log('registerMessageHandler: ' + 'message', e.data);
     let data = JSON.parse(e.data);
-    handlerFunction();
-  }
+    handlerFunction(data);
+  };
 }
 
 function sendMessage (payload) {
