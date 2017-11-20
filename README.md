@@ -1,5 +1,5 @@
 # Description
-Chattrbox is a multi-user chat app.\nChattrbox uses responsive, mobile-first, design.
+Chattrbox is a multi-user chat app. Chattrbox uses responsive, mobile-first, design.
 
 # Technologies
 * HTML, JavaScript, CSS
